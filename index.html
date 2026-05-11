@@ -1,63 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lozada Oceanview Cafe | Sunrise & Coffee in Agis-agis, Palawan</title>
+    <title>Lozada Oceanview Cafe - Sunrise Coffee in Palawan</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f9f5f0; color: #333; }
-        header { background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('sunrise-header.jpg'); background-size: cover; background-position: center; color: white; text-align: center; padding: 150px 20px; }
-        h1 { font-size: 3em; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); }
-        p { font-size: 1.2em; margin-top: 10px; text-shadow: 1px 1px 3px rgba(0,0,0,0.7); }
-        .header-btn { 
-            display: inline-block; 
-            background-color: #FF8C00; 
-            color: white; 
-            padding: 15px 35px; 
-            text-decoration: none; 
-            border-radius: 50px; 
-            font-weight: bold; 
-            font-size: 1.1em;
-            margin-top: 20px; 
-            border: 2px solid white;
-            text-shadow: none;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-            transition: 0.3s;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Arial', sans-serif; background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%); color: white; line-height: 1.6; }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        
+        /* HERO SECTION - TITLE NASA PICTURE NA TO BOSS */
+        .hero { position: relative; margin: 20px 0; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .hero-img { width: 100%; height: 450px; object-fit: cover; display: block; }
+        .hero-overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px; }
+        .hero h1 { font-size: 3rem; color: #f59e0b; margin-bottom: 10px; text-shadow: 3px 3px 6px rgba(0,0,0,0.8); }
+        .hero p { font-size: 1.3rem; color: #e5e7eb; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); }
+        
+        .card { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 15px; padding: 30px; margin: 20px 0; border: 1px solid rgba(255, 255, 255, 0.2); }
+        .card h2 { color: #f59e0b; margin-bottom: 15px; font-size: 1.8rem; }
+        .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 20px 0; }
+        .info-item { background: rgba(0, 0, 0, 0.2); padding: 15px; border-radius: 10px; }
+        .info-item strong { color: #f59e0b; display: block; margin-bottom: 5px; }
+        .booking-options h3 { color: #f59e0b; margin-bottom: 15px; font-size: 1.5rem; text-align: center; }
+        .book-btn { display: block; padding: 18px; margin: 12px 0; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 1.1rem; text-align: center; transition: transform 0.2s; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        .book-btn:hover { transform: translateY(-3px); }
+        .btn-sms { background: linear-gradient(135deg, #10b981, #059669); color: white; }
+        .btn-call { background: linear-gradient(135deg, #f59e0b, #d97706); color: white; }
+        .btn-messenger { background: linear-gradient(135deg, #0084ff, #0066cc); color: white; }
+        .footer { text-align: center; padding: 30px 20px; color: #9ca3af; font-size: 0.9rem; }
+        
+        @media (max-width: 600px) { 
+            .hero h1 { font-size: 2rem; } 
+            .hero p { font-size: 1rem; }
+            .hero-img { height: 300px; }
+            .info-grid { grid-template-columns: 1fr; } 
+            .card { padding: 20px; } 
         }
-        .header-btn:hover { 
-            background-color: white; 
-            color: #FF8C00; 
-        }
-        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-        .section { margin-bottom: 40px; }
-        h2 { color: #6F4E37; border-bottom: 2px solid #6F4E37; padding-bottom: 10px; }
-        .menu-item { display: flex; justify-content: space-between; margin-bottom: 10px; }
-        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
-        .gallery img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; }
-        .btn { background-color: #6F4E37; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; display: inline-block; margin-top: 10px; }
-        footer { text-align: center; padding: 20px; background-color: #6F4E37; color: white; }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Lozada Oceanview Cafe</h1>
-        <p>Your sunrise coffee spot in Agis-agis, Española, Palawan</p>
-        <a href="sms:09950354019?body=Hi! Gusto ko po mag-book sa Lozada Oceanview Cafe for [DATE] at [TIME]. Ilang tao: [NUMBER]" class="header-btn">Book Now via Text</a>
-    </header>
-
     <div class="container">
-        <div class="section">
-            <h2>Welcome to Your Morning Escape</h2>
-            <p>Start your day with the best sunrise view in Agis-agis. We serve fresh local coffee, homemade snacks, and good vibes from 5AM to 12PM. Perfect for tourists and locals!</p>
-            <p><strong>Important:</strong> Agis-agis is remote. Book 1-2 days ahead!</p>
-            <p><strong>📍 Location:</strong> Agis-agis, Española, Palawan</p>
-            <p><strong>📱 Text/Call:</strong> 0995-035-4019</p>
-            <p><strong>🕔 Hours:</strong> 5AM - 12PM | Best time: 5:30AM for sunrise</p>
-            <p style="margin-top: 20px;"><a href="sms:09950354019?body=Hi! I want to book a table at Lozada Oceanview Cafe on [DATE] for [TIME]. Name: " class="btn">Text to Book a Table</a></p>
+        
+        <!-- ETO YUNG BAGO BOSS - NAKA-OVERLAP NA SA SUNRISE -->
+        <div class="hero">
+            <img src="sunrise-header.jpg" alt="Sunrise view at Lozada Oceanview Cafe" class="hero-img">
+            <div class="hero-overlay">
+                <h1>🌅 LOZADA OCEANVIEW CAFE</h1>
+                <p>Where Sunrise Meets Your Coffee Cup</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📍 Visit Us in Agis-agis</h2>
+            <p>Experience the most breathtaking sunrise in Española, Palawan while enjoying our signature coffee and homemade meals. Perfect for early risers, couples, and barkada trips!</p>
+            
+            <div class="info-grid">
+                <div class="info-item"><strong>📍 Location</strong>Agis-agis, Española, Palawan</div>
+                <div class="info-item"><strong>⏰ Opening Hours</strong>5:00 AM - 6:00 PM Daily</div>
+                <div class="info-item"><strong>🌅 Best Time</strong>5:30 AM - 7:00 AM for Sunrise</div>
+                <div class="info-item"><strong>📞 Contact</strong>0995-035-4019</div>
+            </div>
+        </div>
+
+        <div class="card booking-options">
+            <h3>📅 Choose How to Book:</h3>
+            
+            <a href="sms:09950354019?body=Hi! I'd like to book a table at Lozada Oceanview Cafe.%0A%0ADate: ____%0ATime: ____%0AGuests: ____%0AName: ____" 
+               class="book-btn btn-sms">
+                📱 Book via TEXT / SMS
+            </a>
+            
+            <a href="tel:09950354019" 
+               class="book-btn btn-call">
+                📞 CALL US NOW: 0995-035-4019
+            </a>
+            
+            <a href="https://m.me/61589678396180" 
+               class="book-btn btn-messenger">
+                💬 MESSAGE US ON MESSENGER
+            </a>
+            
+            <p style="text-align: center; margin-top: 20px; color: #d1d5db; font-size: 0.9rem;">
+                <strong>Note:</strong> Book 1-2 days ahead for sunrise seats! Walk-ins welcome but seats not guaranteed during 5-7AM.
+            </p>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 Lozada Oceanview Cafe | Agis-agis, Española, Palawan</p>
+            <p>Made with ☕ for sunrise lovers</p>
         </div>
     </div>
-
-    <footer>
-        <p>© 2026 Lozada Oceanview Cafe | Made with ☕ in Palawan</p>
-    </footer>
 </body>
 </html>
