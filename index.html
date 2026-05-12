@@ -3,92 +3,276 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lozada Oceanview Cafe - Sunrise Coffee in Palawan</title>
+    <title>Lozada Oceanview Cafe - Sunrise Coffee & Seaside Cottages</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Arial', sans-serif; background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%); color: white; line-height: 1.6; }
-        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
-        
-        /* HERO SECTION - TITLE NASA PICTURE NA TO BOSS */
-        .hero { position: relative; margin: 20px 0; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-        .hero-img { width: 100%; height: 450px; object-fit: cover; display: block; }
-        .hero-overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px; }
-        .hero h1 { font-size: 3rem; color: #f59e0b; margin-bottom: 10px; text-shadow: 3px 3px 6px rgba(0,0,0,0.8); }
-        .hero p { font-size: 1.3rem; color: #e5e7eb; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); }
-        
-        .card { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 15px; padding: 30px; margin: 20px 0; border: 1px solid rgba(255, 255, 255, 0.2); }
-        .card h2 { color: #f59e0b; margin-bottom: 15px; font-size: 1.8rem; }
-        .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 20px 0; }
-        .info-item { background: rgba(0, 0, 0, 0.2); padding: 15px; border-radius: 10px; }
-        .info-item strong { color: #f59e0b; display: block; margin-bottom: 5px; }
-        .booking-options h3 { color: #f59e0b; margin-bottom: 15px; font-size: 1.5rem; text-align: center; }
-        .book-btn { display: block; padding: 18px; margin: 12px 0; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 1.1rem; text-align: center; transition: transform 0.2s; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
-        .book-btn:hover { transform: translateY(-3px); }
-        .btn-sms { background: linear-gradient(135deg, #10b981, #059669); color: white; }
-        .btn-call { background: linear-gradient(135deg, #f59e0b, #d97706); color: white; }
-        .btn-messenger { background: linear-gradient(135deg, #0084ff, #0066cc); color: white; }
-        .footer { text-align: center; padding: 30px 20px; color: #9ca3af; font-size: 0.9rem; }
-        
-        @media (max-width: 600px) { 
-            .hero h1 { font-size: 2rem; } 
-            .hero p { font-size: 1rem; }
-            .hero-img { height: 300px; }
-            .info-grid { grid-template-columns: 1fr; } 
-            .card { padding: 20px; } 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+       .header {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('sunrise-header.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 120px 20px;
+        }
+       .header h1 {
+            font-size: 52px;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+       .header p {
+            font-size: 20px;
+            margin: 15px 0;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            font-weight: 300;
+        }
+       .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+       .section {
+            background: white;
+            margin: 30px 0;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+        }
+        h2 {
+            color: #2c3e50;
+            text-align: center;
+            font-weight: 400;
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+        h3 {
+            color: #e67e22;
+            font-weight: 400;
+            margin-top: 0;
+        }
+        h4 {
+            color: #34495e;
+            font-weight: 500;
+            border-bottom: 1px solid #e67e22;
+            padding-bottom: 8px;
+            margin-top: 30px;
+        }
+        .btn {
+            padding: 14px 28px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            margin: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        input, select, textarea {
+            font-family: inherit;
+        }
+        label {
+            font-weight: 500;
+            color: #34495e;
         }
     </style>
 </head>
 <body>
+
+    <!-- HEADER - SIMPLE OCEAN SUNRISE NA -->
+    <div class="header">
+        <h1>LOZADA OCEANVIEW CAFE</h1>
+        <p>Sunrise Coffee • Seaside Dining • Overnight Cottages</p>
+        <p style="font-size:16px; opacity:0.9;">Experience the perfect sunrise with ocean views and fresh coffee</p>
+    </div>
+
     <div class="container">
         
-        <!-- ETO YUNG BAGO BOSS - NAKA-OVERLAP NA SA SUNRISE -->
-        <div class="hero">
-            <img src="sunrise-header.jpg" alt="Sunrise view at Lozada Oceanview Cafe" class="hero-img">
-            <div class="hero-overlay">
-                <h1>🌅 LOZADA OCEANVIEW CAFE</h1>
-                <p>Where Sunrise Meets Your Coffee Cup</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <h2>📍 Visit Us in Agis-agis</h2>
-            <p>Experience the most breathtaking sunrise in Española, Palawan while enjoying our signature coffee and homemade meals. Perfect for early risers, couples, and barkada trips!</p>
-            
-            <div class="info-grid">
-                <div class="info-item"><strong>📍 Location</strong>Agis-agis, Española, Palawan</div>
-                <div class="info-item"><strong>⏰ Opening Hours</strong>5:00 AM - 6:00 PM Daily</div>
-                <div class="info-item"><strong>🌅 Best Time</strong>5:30 AM - 7:00 AM for Sunrise</div>
-                <div class="info-item"><strong>📞 Contact</strong>0995-035-4019</div>
-            </div>
-        </div>
-
-        <div class="card booking-options">
-            <h3>📅 Choose How to Book:</h3>
-            
-            <a href="sms:09950354019?body=Hi! I'd like to book a table at Lozada Oceanview Cafe.%0A%0ADate: ____%0ATime: ____%0AGuests: ____%0AName: ____" 
-               class="book-btn btn-sms">
-                📱 Book via TEXT / SMS
-            </a>
-            
-            <a href="tel:09950354019" 
-               class="book-btn btn-call">
-                📞 CALL US NOW: 0995-035-4019
-            </a>
-            
-            <a href="https://m.me/61589678396180" 
-               class="book-btn btn-messenger">
-                💬 MESSAGE US ON MESSENGER
-            </a>
-            
-            <p style="text-align: center; margin-top: 20px; color: #d1d5db; font-size: 0.9rem;">
-                <strong>Note:</strong> Book 1-2 days ahead for sunrise seats! Walk-ins welcome but seats not guaranteed during 5-7AM.
+        <!-- ABOUT SECTION - WALA NANG PRICE DITO -->
+        <div class="section">
+            <h2>Welcome to Lozada Oceanview Cafe</h2>
+            <p style="text-align:center; font-size:18px; line-height:1.8; color:#555;">
+                Discover the most serene sunrise dining experience. Our cafe offers breathtaking ocean views, 
+                freshly brewed coffee, and comfortable overnight accommodations for a complete seaside getaway.
             </p>
         </div>
 
-        <div class="footer">
-            <p>© 2026 Lozada Oceanview Cafe | Agis-agis, Española, Palawan</p>
-            <p>Made with ☕ for sunrise lovers</p>
+        <!-- CONTACT + BOOKING SECTION -->
+        <div class="section">
+            <h2>Contact & Online Reservations</h2>
+            
+            <div style="text-align:center; margin:30px 0;">
+                <a href="sms:09950354019" style="text-decoration:none;">
+                    <button class="btn" style="background:#27ae60; color:white;">
+                        Send SMS
+                    </button>
+                </a>
+                
+                <a href="tel:09950354019" style="text-decoration:none;">
+                    <button class="btn" style="background:#2980b9; color:white;">
+                        Call Us
+                    </button>
+                </a>
+                
+                <a href="https://m.me/LozadaOceanviewCafe" target="_blank" style="text-decoration:none;">
+                    <button class="btn" style="background:#3498db; color:white;">
+                        Messenger
+                    </button>
+                </a>
+                
+                <div style="margin-top:30px;">
+                    <button onclick="toggleBooking()" 
+                            class="btn" style="background:#e67e22; color:white; padding:16px 40px; font-size:17px;">
+                        Online Reservation
+                    </button>
+                    <p style="font-size:14px; color:#7f8c8d; margin-top:12px;">Overnight cottage accommodations now available. Reserve online.</p>
+                </div>
+            </div>
+
+            <!-- BOOKING FORM - DITO LANG MAY PRICE -->
+            <div id="bookingForm" style="display:none; max-width:650px; margin:30px auto; padding:40px; border:1px solid #e0e0e0; border-radius:12px; background:#fdfdfd;">
+                <h3 style="text-align:center;">Reservation Form</h3>
+                
+                <form action="https://formspree.io/f/mnjwwnol" method="POST">
+                    
+                    <h4>Guest Information</h4>
+                    
+                    <label>Full Name</label><br>
+                    <input type="text" name="customer_name" placeholder="Enter your full name" required style="width:100%; padding:14px; margin:10px 0 20px 0; border:1px solid #ddd; border-radius:6px; box-sizing:border-box; font-size:15px;"><br>
+                    
+                    <label>Contact Number</label><br>
+                    <input type="tel" name="phone_number" placeholder="09XX XXX XXXX or +63 XXX XXX XXXX" required style="width:100%; padding:14px; margin:10px 0 20px 0; border:1px solid #ddd; border-radius:6px; box-sizing:border-box; font-size:15px;"><br>
+                    <label>Email Address <span style="color:#7f8c8d; font-weight:400; font-size:14px;">(Optional - for international guests)</span></label><br>
+<input type="email" name="email_address" placeholder="yourname@email.com" style="width:100%; padding:14px; margin:10px 0 20px 0; border:1px solid #ddd; border-radius:6px; box-sizing:border-box; font-size:15px;"><br>
+                    <h4>Reservation Details</h4>
+                    
+                    <label>Check-in Date</label><br>
+                    <input type="date" name="booking_date" required style="width:100%; padding:14px; margin:10px 0 20px 0; border:1px solid #ddd; border-radius:6px; box-sizing:border-box; font-size:15px;"><br>
+                    
+                    <label>Preferred Time</label><br>
+                    <select name="time_slot" required style="width:100%; padding:14px; margin:10px 0 20px 0; border:1px solid #ddd; border-radius:6px; box-sizing:border-box; font-size:15px;">
+                        <option value="">Select a time slot</option>
+                        <option>5:00 AM - Sunrise Experience</option>
+                        <option>6:00 AM - Morning Coffee</option>
+                        <option>7:00 AM - Breakfast</option>
+                        <option>3:00 PM - Afternoon Refreshments</option>
+                        <option>6:00 PM - Dinner</option>
+                        <option>7:00 PM - Evening Dining</option>
+                    </select><br>
+                    
+                    <label>Number of Guests</label><br>
+                    <input type="number" name="number_of_people" min="1" max="15" placeholder="2" required style="width:100%; padding:14px; margin:10px 0 20px 0; border:1px solid #ddd; border-radius:6px; box-sizing:border-box; font-size:15px;"><br>
+                    
+                    <h4>Cottage Accommodation</h4>
+                    <p style="font-size:14px; color:#7f8c8d; margin-top:-5px;">Optional: Reserve an overnight cottage for the complete oceanview experience</p>
+                    
+                    <label>Cottage Type</label><br>
+                    <select name="cottage_type" style="width:100%; padding:14px; margin:10px 0 20px 0; border:1px solid #ddd; border-radius:6px; box-sizing:border-box; font-size:15px;">
+                        <option value="None">Day tour only - No accommodation</option>
+                        <option>Small Cottage - ₱300/night (2-3 guests)</option>
+                        <option>Medium Cottage - ₱500/night (4-6 guests)</option>
+                        <option>Large Cottage - ₱700/night (7-10 guests)</option>
+                    </select><br>
+                    
+                    <label>Number of Nights</label><br>
+                    <input type="number" name="number_of_nights" min="0" max="7" placeholder="0 for day tour only" style="width:100%; padding:14px; margin:10px 0 20px 0; border:1px solid #ddd; border-radius:6px; box-sizing:border-box; font-size:15px;"><br>
+                    
+                    <h4>Pre-Order Menu</h4>
+                    <p style="font-size:14px; color:#7f8c8d; margin-top:-5px;">Optional: Pre-order your meals for faster service upon arrival</p>
+                    
+                    <label>Breakfast Selection</label><br>
+                    <select name="breakfast_meal" style="width:100%; padding:14px; margin:10px 0 20px 0; border:1px solid #ddd; border-radius:6px; box-sizing:border-box; font-size:15px;">
+                        <option value="">Select breakfast option</option>
+                        <option>Tapsilog - ₱120</option>
+                        <option>Tocilog - ₱110</option>
+                        <option>Longsilog - ₱110</option>
+                        <option>Sunrise Coffee Set - ₱90</option>
+                    </select><br>
+                    
+                    <label>Main Course</label><br>
+                    <select name="main_dish" style="width:100%; padding:14px; margin:10px 0 20px 0; border:1px solid #ddd; border-radius:6px; box-sizing:border-box; font-size:15px;">
+                        <option value="">Select main course</option>
+                        <option>Beef Steak with Rice - ₱180</option>
+                        <option>Grilled Liempo with Rice - ₱160</option>
+                        <option>Chicken Adobo with Rice - ₱150</option>
+                        <option>Crispy Pork Sisig with Rice - ₱150</option>
+                        <option>Carbonara - ₱130</option>
+                    </select><br>
+                    
+                    <label>Beverages</label><br>
+                    <select name="drinks" style="width:100%; padding:14px; margin:10px 0 20px 0; border:1px solid #ddd; border-radius:6px; box-sizing:border-box; font-size:15px;">
+                        <option value="">Select beverage</option>
+                        <option>Kapeng Barako - ₱60</option>
+                        <option>Cafe Latte - ₱90</option>
+                        <option>Iced Americano - ₱80</option>
+                        <option>Iced Latte - ₱100</option>
+                        <option>Fresh Buko Juice - ₱60</option>
+                    </select><br>
+                    
+                    <label>Desserts</label><br>
+                    <select name="dessert" style="width:100%; padding:14px; margin:10px 0 20px 0; border:1px solid #ddd; border-radius:6px; box-sizing:border-box; font-size:15px;">
+                        <option value="">Select dessert</option>
+                        <option>Leche Flan - ₱60</option>
+                        <option>Halo-Halo - ₱90</option>
+                        <option>Mango Float - ₱80</option>
+                    </select><br>
+                    
+                    <label>Order Details / Quantity</label><br>
+                    <textarea name="order_notes" rows="3" placeholder="Example: 2 Tapsilog, 2 Iced Latte, 1 Leche Flan" style="width:100%; padding:14px; margin:10px 0 20px 0; border:1px solid #ddd; border-radius:6px; box-sizing:border-box; font-size:15px;"></textarea><br>
+                    
+                    <label>Special Requests</label><br>
+                    <input type="text" name="special_request" placeholder="Birthday celebration, anniversary, etc." style="width:100%; padding:14px; margin:10px 0 20px 0; border:1px solid #ddd; border-radius:6px; box-sizing:border-box; font-size:15px;"><br>
+                    
+                    <button type="submit" class="btn" style="background:#e67e22; color:white; width:100%; margin-top:25px; padding:16px; font-size:17px;">
+                        Submit Reservation
+                    </button>
+                    
+                    <p style="font-size:13px; text-align:center; color:#95a5a6; margin-top:20px;">
+                        You will receive a confirmation SMS within 1 hour to confirm your reservation. Thank you!
+                    </p>
+                </form>
+            </div>
         </div>
+
+        <!-- LOCATION SECTION -->
+        <div class="section">
+            <h2>Location</h2>
+            <p style="text-align:center; font-size:17px; color:#555; line-height:1.8;">
+                Brgy. Agis-Agis,Panitian, Spañola, Palawan<br>
+                Located along the scenic coastline<br>
+                Open Daily: 5:00 AM - 9:00 PM
+            </p>
+        </div>
+
     </div>
+
+    <script>
+    function toggleBooking() {
+        var form = document.getElementById('bookingForm');
+        if (form.style.display === 'none' || form.style.display === '') {
+            form.style.display = 'block';
+            form.scrollIntoView({behavior: 'smooth'});
+        } else {
+            form.style.display = 'none';
+        }
+    }
+    </script>
+
 </body>
 </html>
